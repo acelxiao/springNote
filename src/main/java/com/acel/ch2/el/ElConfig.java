@@ -54,7 +54,7 @@ public class ElConfig {
 			System.out.println(randomNumber);
 			System.out.println(fromAnother);
 			
-			System.out.println(IOUtils.toString(testFile.getInputStream()));
+			System.out.println(IOUtils.toString(testFile.getInputStream(), "UTF-8"));
 			System.out.println(IOUtils.toString(testUrl.getInputStream()));
 			System.out.println(bookName);
 			System.out.println(environment.getProperty("book.author"));
