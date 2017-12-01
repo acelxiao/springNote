@@ -4,7 +4,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DemoAnnotationService {
-	@Action(name="ע��ʽ���ص�add����")
-    public void add(){} 
+	@Action(name="拦截信息")
+    public void add(){
+        System.out.println("方法执行啦!!!!!");
+    }
    
 }
