@@ -10,9 +10,7 @@ public class DemoListener implements ApplicationListener<DemoEvent> {
 	public void onApplicationEvent(DemoEvent event) {
 		
 		String msg = event.getMsg();
-		
-		System.out.println("触发事件:"
-				+ msg);
+		System.out.println("触发事件:" + msg);
 
 	}
 

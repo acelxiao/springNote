@@ -13,28 +13,28 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 @ComponentScan("com.acel.ch2.el")
-@PropertySource("classpath:com/acel/ch2/el/test.properties")//7
+@PropertySource("classpath:test.properties")//7
 public class ElConfig {
 	
-	@Value("I Love You!") //1
+	@Value("I Love You!") //1 固定
     private String normal;
 
-	@Value("#{systemProperties['os.name']}") //2
+	@Value("#{systemProperties['os.name']}") //2 操作系统属性
 	private String osName;
 	
-	@Value("#{ T(java.lang.Math).random() * 100.0 }") //3
+	@Value("#{ T(java.lang.Math).random() * 100.0 }") //3 表达式
     private double randomNumber;
 
-	@Value("#{demoService.another}") //4
+	@Value("#{demoService.another}") //4 其他类的属性
 	private String fromAnother;
 
-	@Value("classpath:com/acel/ch2/el/test.txt") //5
+	@Value("classpath:test.txt") //5 文件
 	private Resource testFile;
 
-	@Value("http://www.baidu.com") //6 
+	@Value("http://www.baidu.com") //6 网络
 	private Resource testUrl;
 
-	@Value("${book.name}") //7 
+	@Value("${book.name}") //7 配置文件
 	private String bookName;
 
 	@Autowired
