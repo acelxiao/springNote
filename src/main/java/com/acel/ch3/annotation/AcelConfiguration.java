@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Documented
 @Configuration //1
 @ComponentScan //2
-public @interface WiselyConfiguration {
+public @interface AcelConfiguration {
 	
 	String[] value() default {}; //3
 

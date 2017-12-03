@@ -13,12 +13,12 @@ public class ScheduledTaskService {
 
 	  @Scheduled(fixedRate = 5000) //1
 	  public void reportCurrentTime() {
-	       System.out.println("ÿ������ִ��һ�� " + dateFormat.format(new Date()));
+	       System.out.println("每隔5秒执行一次： " + dateFormat.format(new Date()));
 	   }
 
 	  @Scheduled(cron = "0 28 11 ? * *"  ) //2
 	  public void fixTimeExecution(){
-	      System.out.println("��ָ��ʱ�� " + dateFormat.format(new Date())+"ִ��");
+	      System.out.println("cron表达式执行： " + dateFormat.format(new Date())+"ִ��");
 	  }
 
 }

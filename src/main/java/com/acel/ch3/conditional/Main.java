@@ -12,7 +12,7 @@ public class Main {
 		
 		
 		System.out.println(context.getEnvironment().getProperty("os.name") 
-				+ "ϵͳ�µ��б�����Ϊ: " 
+				+ "系统的命令是: "
 				+ listService.showListCmd());
 		
 		context.close();
